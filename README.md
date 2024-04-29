@@ -1,2 +1,2 @@
 # TTTTT
-Tricky TeX Triangular Target Ten
+Tricky Triangular Tex Target Ten
