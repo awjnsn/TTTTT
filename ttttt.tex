@@ -1,11 +1,13 @@
 \documentclass[8 pt]{extarticle}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{amssymb}
 \usepackage{listings}
 \usepackage{parskip}
 \usepackage{multicol}
 \usepackage{color}
 \usepackage{amsmath}
+\usepackage{tikz}
+
 \pagenumbering{gobble}
 
 \title{Tricky Triangular \TeX\ Target Ten}
@@ -13,6 +15,23 @@
 \date{}
 \begin{document}
 \maketitle
+\begin{center}
+\begin{tikzpicture}
+\draw [ultra thick](0,0) node[anchor=north, ultra thick]{$A$}
+-- (12,0) node[anchor=north, ultra thick]{$C$}
+-- (6,10.4) node[anchor=south, ultra thick
+]{$B$}
+-- cycle;
+\filldraw [color=black, fill=white, ultra thick] (0,0) circle (1in);
+\filldraw [color=black, fill=white, ultra thick] (12,0) circle (1in);
+\filldraw [color=black, fill=white, ultra thick] (6,10.4) circle (0.5in);
+\node[font=\fontsize{60}{60}\selectfont] at (0,0) { 2};
+\node[font=\fontsize{60}{60}\selectfont] at (12,0) {2};
+\node[font=\fontsize{60}{60}\selectfont] at (6,10.4) {1};
+\node[font=\fontsize{60}{60}\selectfont] at (6,4) {5};
+\end{tikzpicture}
+\end{center}
+\vspace{1in}
 \begin{multicols}{2}
 \begin{center}\section*{Instructions}\end{center}
 \begin{enumerate}
@@ -31,11 +50,11 @@
 
 \textbf{Distance}: \dotfill
 
-\textbf{Time:} \dotfill
+\textbf{Time (s):} \dotfill
 
 \textbf{Misses:} \dotfill
 
-\textbf{Score ($\text{Time} + \text{Penalties} * 60$):} \dotfill
+\textbf{Score ($\text{Time} + \text{Misses} * 60$):} \dotfill
 
 \end{multicols}
 \end{document}
